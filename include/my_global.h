@@ -352,7 +352,11 @@ C_MODE_END
 #undef HAVE_ALLOCA_H
 #endif
 #ifdef HAVE_ALLOCA_H
+#ifdef __FreeBSD__
+#include <stdlib.h>
+#else
 #include <alloca.h>
+#endif
 #endif
 #ifdef HAVE_ATOMIC_ADD
 #define new my_arg_new

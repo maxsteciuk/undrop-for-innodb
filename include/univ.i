@@ -177,6 +177,9 @@ management to ensure correct alignment for doubles etc. */
 #ifdef __APPLE__
 #define ulong unsigned long
 #endif
+#ifdef __FreeBSD__ 
+#define ulong unsigned long
+#endif
 
 /* Another basic type we use is unsigned long integer which should be equal to
 the word size of the machine, that is on a 32-bit platform 32 bits, and on a
